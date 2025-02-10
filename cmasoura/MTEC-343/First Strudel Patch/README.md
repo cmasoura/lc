@@ -1,9 +1,9 @@
 # **First Strudel Patch**
 ## Christina Masoura - MTEC-343-001
 
-For this first project, I tried to incorporate as many features of the basic Strudel syntax we covered in class, as well as certain other I found in the [strudel.cc](https://strudel.cc/workshop/first-sounds/).
+For this first project, I tried to incorporate as many features of the basic Strudel syntax we covered in class, as well as certain other functions I found in the [strudel.cc](https://strudel.cc/workshop/first-sounds/).
 
-The **first line** of my code is the basic drum pattern, which I tried to as elaborate as possible with some differentiation per cycle. For this, I am using the Roland CR-1000 sound bank as I figured it sounded realistic and had a good balance in all its sounds.
+The **first line** of my code is the basic drum pattern, which I tried to elaborate with some differentiation per cycle. For this, I am using the Roland CR-1000 sound bank, as I figured it sounded realistic and had a good balance in all its sounds.
 ```javascript
     $: s(`<bd [bd hh]> <hh*2 [ht mt]> [rim|cp] <hh [hh oh] [~ hh]*1.5 hh*3>`)
     .bank("RolandCompurhythm1000")
@@ -13,7 +13,7 @@ In my **second line** I am adding a second kick and snare, this time from the Ca
 $: s("bd sd").delay(.5).gain(0.5).bank("CasioRZ1")
 
 ```
-In the **third line**, I wanted 16th value beats, with a hi-hat. Here, I wanted a different sound than that of hi-hat ofthe first line, so I'm using the Roland TR808 soundbank. Here I used the ? function, so that sometimes the 16th beat is silent. I also used the .gain() function, so that I could achieve some dynamics variation. The .jux(rev) function is also very interesting, as it reverses the order of the sequence (which here doesn't make much difference, only in the dynamics) and also pans the sound.
+In the **third line**, I wanted 16th value beats, with a hi-hat. Here, I wanted a different sound than that of hi-hat of the first line, so I'm using the Roland TR808 soundbank. Here I used the ? function, so that sometimes the 16th beat is silent. I also used the .gain() function, so that I could achieve some dynamics variation. The .jux(rev) function is also very interesting, as it reverses the order of the sequence (which here doesn't make much difference, only in the dynamics) and also pans the sound.
 
 ```javascript
 $: s("hh*16?").gain("[.15 1]*4").jux(rev).bank("RolandTR808").room(.3)
@@ -35,7 +35,7 @@ $: s(`rim ~ rim ~ rim rim ~ rim rim ~ rim rim ~ rim rim ~,
   .ply("<1 2 2 1>").gain(0.5)
 ```
 
-The **fifth** and final **line** was the one I seriously considered to ommit, but decided to put it here with some warnings. It was my way of creating a bass line but only with the drum sounds. I took advantage of the great number of repetitions this interface can do, and made it play in pitch frequencies. However, this caused my session to crash several times, so it's definitely not the best thing to do.
+The **fifth** and final **line** was the one I seriously considered to omit, but decided to put it here with a warning. It was my way of creating a bass line but only with the drum sounds. I took advantage of the great number of repetitions this interface can do, and made it play in pitch frequencies. However, this caused my session to crash several times, so it's definitely not the best thing to do.
 
 ```javascript
   $: sound("<[[bd!110] [bd!131]] [[[bd!146.8]  [bd!164.6]]!2]>").lpf("<50 100>")
