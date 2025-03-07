@@ -47,7 +47,7 @@ $: note("<c>*16").sound("< gm_helicopter>").gain(3)
 $: note("c4,c6,g6,c7").sound("zzfx").gain(0.1)
 ```
 
-And last, but not least, this is the main melody (with its variation), and a guitar solo that plays before the final bead drop (something like a bridge).
+And last, but not least, this is the main melody (with its variation), and a guitar solo that plays before the final beat drop (something like a bridge).
 ```javascript
 $: note("<[c4@3 [d4 eb4]] [c4@3 [d4 eb4]] [c4@3 [d4 eb4]] [bb4@3 g4] [f4@3 [g4 f4]]  eb4 ~ d4>*2").sound("gm_fx_atmosphere").gain(1.4)
 _$: note("<[c4@3 [d4 eb4]] [c4@3 [d4 eb4]] [g4 eb4 ~ eb4] [ab4 eb4 g4 eb4] [c4@3 [d4 eb4]] c4@3 >*2").sound("gm_fx_atmosphere").pan(sine).gain(1.2)
