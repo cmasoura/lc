@@ -1,4 +1,4 @@
-# Second Strudel Patch
+# Strudel + Hydra Patch
 ## MTEC-343-001 Masoura
 
 
