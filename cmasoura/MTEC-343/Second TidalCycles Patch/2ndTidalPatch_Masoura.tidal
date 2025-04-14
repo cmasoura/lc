@@ -1,0 +1,10 @@
+d1 $ sound "bd*4" # n "<0 4>"
+d2 $ s "~ hh ~ ~ hh*2"
+
+d3 $ s "bass:0*8" # lpf (range 200 5000 $ sine) |-12
+
+d4 $ slow "2" $ note "c'maj e'min" # s "gtr"
+
+d5 $ note "0 4 7 5 4 9" # s "supermandolin"  
+
+d6 $ slow 8 $ s "fire"
