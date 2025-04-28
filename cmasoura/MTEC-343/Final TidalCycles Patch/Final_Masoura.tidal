@@ -1,0 +1,30 @@
+d1 $ sound "bd(5,8)"
+d1 $ sound "bd*4" # gain "1.3"
+
+d2 $ s "~ ~ ~ hh*4"
+d2 $ s "bd _ bd hh*4"
+
+d3 $ s "[bd(3,8), cp(2,8), hh(7,8), bass:1(7,16)]"
+
+d4 $ s "bass:5*8" # lpf (range 200 5000 $ sine)
+
+d5 $ sound "numbers:1"  #speed "0.5"
+d5 $ sound "numbers:1 numbers:2 numbers:3 numbers:4 numbers:5" # speed "1"
+
+d6 $ sound "jvbass [jvbass jvbass] jvbass ~" # iter 3 (note "1 [3 5] 7")
+
+d7 $ slow 2 $ note "gs5 g5 d6 c6 gs5 g5 [d6 c6] d6" # s "superzow" # gain "0.5"  |+ note 24
+
+
+unmute 1
+
+mute 5
+solo 1
+mute 7
+solo 7
+unsolo 1
+unmute 1
+unsoloAll
+unmuteAll
+
+hush
